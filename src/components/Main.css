@@ -1,0 +1,22 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 80px auto 0 100px;
+  padding: 20px
+}
+
+.main-is-ie {
+  width: 1px;
+  font-size: 100px;
+  margin: 60px 0 0 100px;
+}
+
+@media (max-width: 970px) {
+  .main-container {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -5,6 +5,19 @@ body {
   color: dimgray;
 }
 
+a {
+  color: dimgray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: salmon;
+}
+
+ul {
+  padding: 0;
+}
+
 .salmon { color: salmon; }
 .hotpink { color: hotpink; }
 .darkorange { color: darkorange; }

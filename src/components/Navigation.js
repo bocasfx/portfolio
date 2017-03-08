@@ -4,15 +4,8 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
 class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
   render() {
-
-    let navigationClass = 'background-' + this.props.color.color + ' navigation-home animated fadeIn';
-
+    let navigationClass = 'background-' + this.props.navigation.color + ' navigation-home animated fadeIn';
     return (
       <div>
         <div className="navigation-container">
@@ -33,7 +26,7 @@ class Navigation extends React.Component {
 }
 
 const mapStatetoProps = (state) => {
-  return { color: state.navigation };
+  return { navigation: state.navigation };
 };
 
 export default connect(mapStatetoProps)(Navigation);

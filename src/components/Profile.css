@@ -1,0 +1,40 @@
+.profile-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  max-width: 350px;
+}
+
+.profile-description {
+  text-align: justify;
+  color: silver;
+  margin-top: 40px;
+  font-weight: 200;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.profile-title {
+  font-size: 1.5em;
+  color: silver;
+  font-weight: 200;
+}
+
+.profile-linkedin {
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 970px) {
+  .profile-container {
+    position: relative;
+  }
+}

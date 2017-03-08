@@ -3,10 +3,11 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
+import Main from './components/Main';
 import Project from './components/Project';
 import reducer from './reducers';
 import './index.css';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createDevTools } from 'redux-devtools';
 import LogMonitor from 'redux-devtools-log-monitor';
@@ -26,6 +27,7 @@ render(
     <div>
       <Router history={history}>
         <Route path="/" component={App}>
+          <IndexRoute component={Main}/>
           <Route path="/project/:projectId" component={Project}></Route>
         </Route>
       </Router>

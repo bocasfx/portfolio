@@ -1,9 +1,11 @@
-export default function changeColor(state = 'plum', action) {
+const initialState = {
+  color: 'plum'
+};
+
+export default function changeColor(state = initialState, action) {
   switch (action.type) {
     case 'CHANGE_COLOR':
-      return Object.assign({}, state, {
-        color: action.color
-      });
+      return { color: action.color };
     default:
       return state;
   }

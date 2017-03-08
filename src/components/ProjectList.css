@@ -1,0 +1,12 @@
+.project-list {
+  margin: 0 0 40px 400px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 4000px;
+}
+
+@media (max-width: 970px) {
+  .project-list {
+    margin: 40px 0 0 0;
+  }
+}

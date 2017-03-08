@@ -1,0 +1,73 @@
+.project-list-item {
+  position: relative;
+  font-size: 1.5em;
+  margin: 10px;
+  width: 400px;
+  background-color: white;
+}
+
+.project-list-item-triangle {
+  vertical-align: middle;
+  content: "";
+  border-right: 20px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 20px solid transparent;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.project-list-item-title {
+  width: calc(100% - 50px);
+}
+
+.project-list-item-li {
+  list-style: none;
+  border: 1px solid gainsboro;
+  padding: 20px;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-list-item-li:hover {
+  transform: scale(1.03, 1.03);
+  box-shadow: 1px 1px 5px 0 rgba(175, 175, 175, 1);
+}
+
+.project-list-item-li i {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.project-list-item-li:hover i {
+  opacity: 1;
+}
+
+.project-list-item-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-list-item-info:hover + .bubble-container {
+  width: calc(100% - 50px);
+  height: 70px;
+  font-size: 0.75em;
+  padding: 20px;
+}
+
+@media (max-width: 970px) {
+  .project-list-item {
+    width: 100%;
+  }
+}
