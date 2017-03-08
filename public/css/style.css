@@ -1,0 +1,49 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: dimgray;
+}
+
+a {
+  color: dimgray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: salmon;
+}
+
+ul {
+  padding: 0;
+}
+
+.salmon { color: salmon; }
+.hotpink { color: hotpink; }
+.darkorange { color: darkorange; }
+.tomato { color: tomato; }
+.gold { color: gold; }
+.yellowgreen { color: yellowgreen; }
+.lightseagreen { color: lightseagreen; }
+.dodgerblue { color: dodgerblue; }
+.plum { color: plum; }
+
+.background-salmon { background-color: salmon; transition: 1s ease-in-out}
+.background-hotpink { background-color: hotpink; transition: 1s ease-in-out}
+.background-darkorange { background-color: darkorange; transition: 1s ease-in-out}
+.background-tomato { background-color: tomato; transition: 1s ease-in-out}
+.background-gold { background-color: gold; transition: 1s ease-in-out}
+.background-yellowgreen { background-color: yellowgreen; transition: 1s ease-in-out}
+.background-lightseagreen { background-color: lightseagreen; transition: 1s ease-in-out}
+.background-dodgerblue { background-color: dodgerblue; transition: 1s ease-in-out}
+.background-plum { background-color: plum; transition: 1s ease-in-out}
+
+.hover-salmon:hover { color: salmon; border-color: salmon; }
+.hover-hotpink:hover { color: hotpink; border-color: hotpink; }
+.hover-darkorange:hover { color: darkorange; border-color: darkorange; }
+.hover-tomato:hover { color: tomato; border-color: tomato; }
+.hover-gold:hover { color: gold; border-color: gold; }
+.hover-yellowgreen:hover { color: yellowgreen; border-color: yellowgreen; }
+.hover-lightseagreen:hover { color: lightseagreen; border-color: lightseagreen; }
+.hover-dodgerblue:hover { color: dodgerblue; border-color: dodgerblue; }
+.hover-plum:hover { color: plum; border-color: plum; }

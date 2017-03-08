@@ -1,0 +1,47 @@
+.navigation-home {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  transform: rotate(45deg);
+  z-index: 2;
+  box-shadow: 1px 1px 2px 0 rgba(200, 200, 200, 1);
+}
+
+.navigation-prev-next {
+  width: 250px;
+  height: 250px;
+  position: fixed;
+  top: -143px;
+  left: -143px;
+  transform: rotate(45deg);
+  z-index: 1;
+  background-color: gainsboro;
+  color: dimgray;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.navigation-prev-next div {
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 213px;
+  width: 50px;
+}
+
+.navigation-prev {
+  top: 175px;
+}
+
+.navigation-next {
+  top: 65px;
+}
+
+.navigation-home:hover + .navigation-prev-next,
+.navigation-prev-next:hover {
+  top: -125px;
+  left: -125px;
+  opacity: 1;
+}
