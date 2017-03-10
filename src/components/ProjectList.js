@@ -1,19 +1,28 @@
 import React from 'react';
 import './ProjectList.css';
-import { getActiveProjects } from '../actions/projects';
+import { getProjects } from '../actions/projects';
 import { connect } from 'react-redux';
 import ProjectListItem from './ProjectListItem';
+import { bindActionCreators } from 'redux';
+import colors from '../utils/colors';
+import { changeHeaderColor } from '../actions/navigation';
 
 class ProjectList extends React.Component {
 
   componentWillMount() {
-    this.props.dispatch(getActiveProjects());
+    this.props.getProjects();
   }
 
   renderProjects() {
     return this.props.projects.map((project, idx) => {
+      let color = colors[idx % colors.length];
       return (
-        <ProjectListItem project={project} key={idx}/>
+        <ProjectListItem
+          project={project}
+          key={idx}
+          id={idx}
+          color={color}
+          changeHeaderColor={this.props.changeHeaderColor}/>
       );
     });
   }
@@ -30,8 +39,16 @@ class ProjectList extends React.Component {
 }
 
 const mapStatetoProps = (state) => {
-  console.log(state);
-  return { projects: state.projects };
+  return {
+    projects: state.projects
+  };
 };
 
-export default connect(mapStatetoProps)(ProjectList);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getProjects: bindActionCreators(getProjects, dispatch),
+    changeHeaderColor: bindActionCreators(changeHeaderColor, dispatch)
+  };
+};
+
+export default connect(mapStatetoProps, mapDispatchToProps)(ProjectList);

@@ -1,47 +1,50 @@
 import React from 'react';
-// import colors from './colors.js';
 import './ProjectListItem.css';
 // import Bubble from './bubble.jsx';
-import { changeColor } from '../actions/navigation';
-import { connect } from 'react-redux';
 
 class ProjectListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+    this.onMouseOver = this.onMouseOver.bind(this);
+    this.onMouseOut = this.onMouseOut.bind(this);
 
-  // componentWillReceiveProps(props) {
-  //   this.setState({
-  //     triangleStyle: {},
-  //     project: props.project,
-  //     color: colors[props.project.id % colors.length],
-  //     projectUrl: '/projects/' + props.project.id
-  //   });
-  // }
-
-  onClick() {
-    this.props.dispatch(changeColor('dodgerblue'));
+    this.state = {
+      borderTopColor: this.props.color,
+      opacity: 0
+    };
   }
 
-  // onMouseOver() {
-  //   this.setState({
-  //     triangleStyle: {
-  //       borderTopColor: this.state.color,
-  //       opacity: 1
-  //     }
-  //   });
-  // }
+  onClick() {
+    this.props.changeHeaderColor(this.props.color);
+  }
 
-  // onMouseOut() {
-  //   this.setState({
-  //     triangleStyle: {}
-  //   });
-  // }
+  onMouseOver(event) {
+    event.preventDefault();
+    this.setState({
+      borderStyle: {
+        borderTopColor: this.props.color,
+        opacity: 1
+      }
+    });
+  }
+  
+  onMouseOut(event) {
+    event.preventDefault();
+    this.setState({
+      borderStyle: {
+        opacity: 0
+      }
+    });
+  }
 
   render() {
-    let liClass = 'project-list-item-li animated fadeIn hover-tomato';
-    let iconClass = 'fa fa-laptop';
+    let liClass = 'project-list-item-li animated fadeIn hover-' + this.props.color;
+    let iconClass = 'fa fa-' + this.props.project.icon;
     return (
-      <div className="project-list-item" onClick={this.onClick.bind(this)}>
+      <div className="project-list-item" onClick={this.onClick} onMouseOut={this.onMouseOut} onMouseOver={this.onMouseOver}>
         <li className={liClass}>
-          <div className="project-list-item-triangle"></div>
+          <div className="project-list-item-triangle" style={this.state.borderStyle}></div>
           <div className="project-list-item-title">{this.props.project.title}</div>
           <div className="project-list-item-info">
             <i className={iconClass}></i>
@@ -52,9 +55,4 @@ class ProjectListItem extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return state;
-}
-
-export default connect(mapStateToProps)(ProjectListItem);
-
+export default ProjectListItem;

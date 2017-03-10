@@ -1,5 +1,12 @@
-export const getActiveProjects = () => {
+export const getProjects = () => {
   return {
-    type: 'GET_ACTIVE_PROJECTS'
+    type: 'GET_PROJECTS'
+  };
+};
+
+export const filterProjects = (categories) => {
+  return {
+    type: 'FILTER_PROJECTS',
+    categories
   };
 };

@@ -1,6 +1,6 @@
-export const changeColor = (color) => {
+export const changeHeaderColor = (color) => {
   return {
-    type: 'CHANGE_COLOR',
+    type: 'CHANGE_HEADER_COLOR',
     color
   };
 };

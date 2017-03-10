@@ -1,25 +1,34 @@
 import React from 'react';
 import './Profile.css';
-import colors from '../utils/colors.js';
+import Filter from './Filter';
+import { connect } from 'react-redux';
+import { filterProjects } from '../actions/projects';
+import { bindActionCreators } from 'redux';
 
 class Profile extends React.Component {
   render() {
 
-    let color = colors[Math.floor(Math.random() * colors.length)];
-    let profileClass = 'profile-linkedin hover-' + color;
-
     return (
       <div className="profile-container animated fadeIn">
-        <a className={profileClass} href="https://www.linkedin.com/in/rodolfopalacios" target="_blank">
-          <div>
-            <img src="/img/profile.png" className="profile-image" alt="Profile"/>
-          </div>
+        <a href="https://www.linkedin.com/in/rodolfopalacios" target="_blank">
+          <img src="/img/profile.png" className="profile-image" alt="Profile"/>
           <div className="profile-name">Rodolfo Palacios</div>
           <div className="profile-title">Software Developer</div>
         </a>
+        <Filter filterProjects={this.props.filterProjects}/>
       </div>
     );
   }
 }
 
-module.exports = Profile;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    filterProjects: bindActionCreators(filterProjects, dispatch)
+  };
+};
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Profile);

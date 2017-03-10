@@ -4,6 +4,7 @@
   flex-direction: column;
   position: fixed;
   max-width: 350px;
+  text-align: center;
 }
 
 .profile-description {

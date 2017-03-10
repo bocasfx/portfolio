@@ -1,16 +1,16 @@
 import React from 'react';
 import './Project.css';
 import { connect } from 'react-redux';
-import { changeColor } from '../actions/navigation';
+import { changeHeaderColor } from '../actions/navigation';
 
 class Project extends React.Component {
 
   componentWillMount() {
-    this.props.dispatch(changeColor('darkorange'));
+    this.props.dispatch(changeHeaderColor('darkorange'));
   }
 
   onClick() {
-    this.props.dispatch(changeColor('dodgerblue'));
+    this.props.dispatch(changeHeaderColor('dodgerblue'));
   }
 
   render() {
