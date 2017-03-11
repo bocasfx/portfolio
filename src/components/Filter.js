@@ -35,8 +35,14 @@ class Filter extends React.Component {
     let styles = this.state.styles;
     styles[category] = styles[category] ? null : filterColors[category];
 
-    this.props.filterProjects(activeCategories);
     this.setState({styles, activeCategories});
+
+    this.props.fadeOutProjects();
+    setTimeout(() => {
+      this.props.clearProjects();
+      this.props.filterProjects(activeCategories);  
+    }, 500);
+    
   }
 
   render() {

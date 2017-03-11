@@ -2,7 +2,7 @@ import React from 'react';
 import './Profile.css';
 import Filter from './Filter';
 import { connect } from 'react-redux';
-import { filterProjects } from '../actions/projects';
+import { filterProjects, clearProjects, fadeOutProjects } from '../actions/projects';
 import { bindActionCreators } from 'redux';
 
 class Profile extends React.Component {
@@ -15,7 +15,10 @@ class Profile extends React.Component {
           <div className="profile-name">Rodolfo Palacios</div>
           <div className="profile-title">Software Developer</div>
         </a>
-        <Filter filterProjects={this.props.filterProjects}/>
+        <Filter
+          filterProjects={this.props.filterProjects}
+          clearProjects={this.props.clearProjects}
+          fadeOutProjects={this.props.fadeOutProjects}/>
       </div>
     );
   }
@@ -27,7 +30,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    filterProjects: bindActionCreators(filterProjects, dispatch)
+    filterProjects: bindActionCreators(filterProjects, dispatch),
+    clearProjects: bindActionCreators(clearProjects, dispatch),
+    fadeOutProjects: bindActionCreators(fadeOutProjects, dispatch)
   };
 };
 

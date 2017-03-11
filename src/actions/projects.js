@@ -10,3 +10,15 @@ export const filterProjects = (categories) => {
     categories
   };
 };
+
+export const clearProjects = () => {
+  return {
+    type: 'CLEAR_PROJECTS'
+  };
+};
+
+export const fadeOutProjects = () => {
+  return {
+    type: 'FADE_OUT_PROJECTS'
+  };
+};

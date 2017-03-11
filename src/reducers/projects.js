@@ -11,12 +11,23 @@ const filterProjects = (state, categories) => {
   });
 };
 
-export default function getProjects(state = projects, action) {
+export default (state = projects, action) => {
   switch (action.type) {
     case 'GET_PROJECTS':
       return state;
     case 'FILTER_PROJECTS':
-      return filterProjects(state, action.categories);
+      let newState = filterProjects(state, action.categories);
+      return newState.map((project) => {
+        project.transition = 'fadeIn';
+        return project;
+      });
+    case 'CLEAR_PROJECTS':
+      return [];
+    case 'FADE_OUT_PROJECTS':
+      return state.map((project) => {
+        project.transition = 'fadeOut';
+        return project;
+      });
     default:
       return state;
   }

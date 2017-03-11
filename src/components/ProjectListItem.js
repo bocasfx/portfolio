@@ -39,7 +39,7 @@ class ProjectListItem extends React.Component {
   }
 
   render() {
-    let liClass = 'project-list-item-li animated fadeIn hover-' + this.props.color;
+    let liClass = 'project-list-item-li animated ' + this.props.project.transition + ' hover-' + this.props.color;
     let iconClass = 'fa fa-' + this.props.project.icon;
     return (
       <div className="project-list-item" onClick={this.onClick} onMouseOut={this.onMouseOut} onMouseOver={this.onMouseOver}>

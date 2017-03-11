@@ -1,6 +1,7 @@
 export default [
   {
     id: '0',
+    transition: 'fadeIn',
     active: true,
     'title': 'The Tree Whithin',
     description: 'Series of B&W illustrations for The Tree Within.',
@@ -18,6 +19,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '1',
+    transition: 'fadeIn',
     active: true,
     'title': 'Non-Violence Festival',
     description: 'Poster proposal for the Non-Violence Festival.',
@@ -28,6 +30,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '2',
+    transition: 'fadeIn',
     active: true,
     'title': 'The Rambler',
     description: 'Web design proposals for The Rambler.',
@@ -39,6 +42,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '3',
+    transition: 'fadeIn',
     active: true,
     'title': 'Give & Get Network',
     description: 'Logo design for the Give and Get Network of Kitchener-Waterloo.',
@@ -49,6 +53,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '4',
+    transition: 'fadeIn',
     active: true,
     'title': 'Rhino Works',
     description: 'Logo proposal for Rhino Works.',
@@ -59,6 +64,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '5',
+    transition: 'fadeIn',
     active: true,
     'title': 'Savvy Green',
     description: 'Web design proposal for soap manufacturer Savvy Green.',
@@ -72,6 +78,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '6',
+    transition: 'fadeIn',
     active: true,
     'title': 'Vital Response',
     description: 'Web design for first aid training company Vital Response.',
@@ -88,6 +95,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '7',
+    transition: 'fadeIn',
     active: true,
     'title': 'Agfa Deploy',
     description: 'Logo design for Agfa\'s software delivery solution.',
@@ -98,6 +106,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '8',
+    transition: 'fadeIn',
     active: true,
     'title': 'Bloom',
     description: '3D animation based on computer simulations of natural systems.',
@@ -113,6 +122,7 @@ export default [
     icon: 'video-camera'
   }, {
     id: '9',
+    transition: 'fadeIn',
     active: true,
     'title': 'Pink Chipotle',
     description: 'My traditional Mexican and Pre-hispanic food blog.',
@@ -127,6 +137,7 @@ export default [
     icon: 'cutlery'
   }, {
     id: '10',
+    transition: 'fadeIn',
     active: true,
     'title': 'The Sofa Kings',
     description: 'The Sofa Kings are the next generation of psychedelic jam music.',
@@ -144,6 +155,7 @@ export default [
     icon: 'music'
   }, {
     id: '11',
+    transition: 'fadeIn',
     active: true,
     'title': 'Q',
     description: 'Q is a soft MIDI controller.',
@@ -158,6 +170,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '12',
+    transition: 'fadeIn',
     active: true,
     'title': 'eSpire',
     description: 'Logo design for eSpire.',
@@ -168,6 +181,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '13',
+    transition: 'fadeIn',
     active: true,
     'title': 'GeeBee Pedals',
     description: 'Miscelaneous design work for GeeBee Pedals.',
@@ -186,6 +200,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '14',
+    transition: 'fadeIn',
     active: true,
     'title': 'The Sofa Kings',
     description: 'Cover proposal for The Sofa Kings',
@@ -197,6 +212,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '15',
+    transition: 'fadeIn',
     active: true,
     'title': 'Your Time Boutique',
     description: 'Website design for Your Time Boutique.',
@@ -213,6 +229,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '16',
+    transition: 'fadeIn',
     active: true,
     'title': 'MIDIWorm',
     description: 'MidiWorm is yet another soft MIDI controller.',
@@ -226,6 +243,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '17',
+    transition: 'fadeIn',
     active: true,
     'title': 'Tape',
     description: 'Four track virtual tape machine.',
@@ -240,6 +258,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '18',
+    transition: 'fadeIn',
     active: true,
     'title': 'Bubbles',
     description: 'Bubbles is a soft MIDI controller.',
@@ -253,6 +272,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '19',
+    transition: 'fadeIn',
     active: true,
     'title': 'Marvin',
     description: 'Marvin is a three-dimensional image visualization tool.',
@@ -270,6 +290,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '20',
+    transition: 'fadeIn',
     active: true,
     'title': 'The Vinyl Revival',
     description: 'Poster illustration for The Vinyl Revival.',
@@ -282,6 +303,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '21',
+    transition: 'fadeIn',
     active: true,
     'title': 'Spanish Solutions',
     description: 'Web design for Toronto based company Spanish Solutions.',
@@ -292,6 +314,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '22',
+    transition: 'fadeIn',
     active: true,
     'title': 'Smarter Resources',
     description: 'Logo proposal for Smarter Resources.',
@@ -307,6 +330,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '23',
+    transition: 'fadeIn',
     active: true,
     'title': 'Druidas',
     description: 'Graphic design for Druidas‘ self titled album.',
@@ -323,6 +347,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '24',
+    transition: 'fadeIn',
     active: true,
     'title': 'GeeBee Pedals',
     description: 'Web design for Geebee Pedals.',
@@ -339,6 +364,7 @@ export default [
     icon: 'paint-brush'
   }, {
     id: '25',
+    transition: 'fadeIn',
     active: true,
     'title': 'Drone 1',
     description: '3D visual and auditory navigation.',
@@ -353,6 +379,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '26',
+    transition: 'fadeIn',
     active: true,
     'title': 'Crane Service Systems',
     description: 'Icon design Crane Service Systems.',
@@ -364,6 +391,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '27',
+    transition: 'fadeIn',
     active: true,
     'title': 'Drone 2',
     description: 'TBD',
@@ -378,6 +406,7 @@ export default [
     icon: 'laptop'
   }, {
     id: '28',
+    transition: 'fadeIn',
     active: true,
     'title': 'SixtyCycles - EP01',
     description: 'TBD',
@@ -390,6 +419,7 @@ export default [
     icon: 'music'
   }, {
     id: '29',
+    transition: 'fadeIn',
     active: true,
     'title': 'Bass Rack',
     description: 'TBD',
