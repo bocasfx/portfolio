@@ -22,3 +22,10 @@ export const fadeOutProjects = () => {
     type: 'FADE_OUT_PROJECTS'
   };
 };
+
+export const getProject = (id) => {
+  return {
+    type: 'GET_PROJECT',
+    id
+  };
+};

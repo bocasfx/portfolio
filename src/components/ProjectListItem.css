@@ -17,7 +17,6 @@
   top: 0;
   left: 0;
   position: absolute;
-  transition: 0.3s ease-in-out;
   opacity: 0;
 }
 
@@ -29,7 +28,6 @@
   list-style: none;
   border: 1px solid gainsboro;
   padding: 20px;
-  transition: 0.2s ease-in-out;
   display: flex;
   justify-content: space-between;
 }
@@ -41,7 +39,6 @@
 
 .project-list-item-li i {
   opacity: 0;
-  transition: 0.2s ease-in-out;
 }
 
 .project-list-item-li:hover i {
@@ -64,6 +61,20 @@
   height: 70px;
   font-size: 0.75em;
   padding: 20px;
+}
+
+.bubble-container {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 970px) {

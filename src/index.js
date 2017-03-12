@@ -9,17 +9,17 @@ import reducer from './reducers';
 import './index.css';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-// import { createDevTools } from 'redux-devtools';
-// import LogMonitor from 'redux-devtools-log-monitor';
-// import DockMonitor from 'redux-devtools-dock-monitor';
+import { createDevTools } from 'redux-devtools';
+import LogMonitor from 'redux-devtools-log-monitor';
+import DockMonitor from 'redux-devtools-dock-monitor';
 
-// const DevTools = createDevTools(
-//   <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
-//     <LogMonitor theme="tomorrow" preserveScrollTop={false} />
-//   </DockMonitor>
-// );
+const DevTools = createDevTools(
+  <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
+    <LogMonitor theme="tomorrow" preserveScrollTop={false} />
+  </DockMonitor>
+);
 
-const store = createStore(reducer);
+const store = createStore(reducer, DevTools.instrument());
 const history = syncHistoryWithStore(browserHistory, store);
 
 render(
@@ -28,9 +28,10 @@ render(
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Main}/>
-          <Route path="/project/:projectId" component={Project}></Route>
+          <Route path="/projects/:projectId" component={Project}></Route>
         </Route>
       </Router>
+      <DevTools/>
     </div>
   </Provider>,
   document.getElementById('root')

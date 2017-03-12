@@ -1,29 +1,59 @@
 import React from 'react';
 import './Project.css';
 import { connect } from 'react-redux';
-import { changeHeaderColor } from '../actions/navigation';
+import { getProject } from '../actions/projects';
+import { bindActionCreators } from 'redux';
 
 class Project extends React.Component {
 
   componentWillMount() {
-    this.props.dispatch(changeHeaderColor('darkorange'));
+    this.props.getProject(parseInt(this.props.params.projectId, 10));
   }
 
-  onClick() {
-    this.props.dispatch(changeHeaderColor('dodgerblue'));
+  componentWillReceiveProps(props) {
+    this.props.getProject(parseInt(props.params.projectId, 10));
+  }
+
+  renderImages() {
+    return this.props.project.images.map((img, idx) => {
+      return (
+        <img src={img} key={idx} alt="Project"/>
+      );
+    });
+  }
+
+  renderInfo() {
+    return this.props.project.info.map((line, idx) => {
+      return (
+        <p key={idx}>{line}</p>
+      );
+    });
   }
 
   render() {
+    let titleClass = 'project-title ' + this.props.color;
     return (
-      <div className="project-container">
-        <button onClick={this.onClick.bind(this)}>Change Color</button>
+      <div className="project-container animated fadeIn">
+        <div className="project-left">
+          <div className={titleClass}>{this.props.project.title}</div>
+          <div className="project-info">{this.renderInfo()}</div>
+        </div>
+        <div className="project-images-container">{this.renderImages()}</div>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return state;
-}
+const mapStateToProps = (state) => {
+  return {
+    project: state.projects[0]
+  };
+};
 
-export default connect(mapStateToProps)(Project);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getProject: bindActionCreators(getProject, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Project);

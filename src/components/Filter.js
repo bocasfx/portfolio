@@ -48,12 +48,12 @@ class Filter extends React.Component {
   render() {
     return (
       <div className="filter-container">
-        <i style={this.state.styles.laptop} className="fa fa-laptop" onClick={() => {this.filterProjects('laptop');}}></i>
-        <i style={this.state.styles['paint-brush']} className="fa fa-paint-brush" onClick={() => {this.filterProjects('paint-brush');}}></i>
-        <i style={this.state.styles.cutlery} className="fa fa-cutlery" onClick={() => {this.filterProjects('cutlery');}}></i>
-        <i style={this.state.styles.music} className="fa fa-music" onClick={() => {this.filterProjects('music');}}></i>
-        <i style={this.state.styles['video-camera']} className="fa fa-video-camera" onClick={() => {this.filterProjects('video-camera');}}></i>
-        <i style={this.state.styles.wrench} className="fa fa-wrench" onClick={() => {this.filterProjects('wrench');}}></i>
+        <i style={this.state.styles.laptop} className="transition2 fa fa-laptop" onClick={() => {this.filterProjects('laptop');}}></i>
+        <i style={this.state.styles['paint-brush']} className="transition2 fa fa-paint-brush" onClick={() => {this.filterProjects('paint-brush');}}></i>
+        <i style={this.state.styles.cutlery} className="transition2 fa fa-cutlery" onClick={() => {this.filterProjects('cutlery');}}></i>
+        <i style={this.state.styles.music} className="transition2 fa fa-music" onClick={() => {this.filterProjects('music');}}></i>
+        <i style={this.state.styles['video-camera']} className="transition2 fa fa-video-camera" onClick={() => {this.filterProjects('video-camera');}}></i>
+        <i style={this.state.styles.wrench} className="transition2 fa fa-wrench" onClick={() => {this.filterProjects('wrench');}}></i>
       </div>
     );
   }

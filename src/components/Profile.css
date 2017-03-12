@@ -29,11 +29,6 @@
   font-weight: 200;
 }
 
-.profile-linkedin {
-  text-align: center;
-  transition: 0.2s ease-in-out;
-}
-
 @media (max-width: 970px) {
   .profile-container {
     position: relative;

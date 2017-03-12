@@ -12,7 +12,7 @@ class Profile extends React.Component {
       <div className="profile-container animated fadeIn">
         <a href="https://www.linkedin.com/in/rodolfopalacios" target="_blank">
           <img src="/img/profile.png" className="profile-image" alt="Profile"/>
-          <div className="profile-name">Rodolfo Palacios</div>
+          <div className="transition2 profile-name">Rodolfo Palacios</div>
           <div className="profile-title">Software Developer</div>
         </a>
         <Filter

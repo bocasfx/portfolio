@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProjectListItem.css';
-// import Bubble from './bubble.jsx';
+import { Link } from 'react-router';
 
 class ProjectListItem extends React.Component {
   constructor(props) {
@@ -39,17 +39,22 @@ class ProjectListItem extends React.Component {
   }
 
   render() {
-    let liClass = 'project-list-item-li animated ' + this.props.project.transition + ' hover-' + this.props.color;
-    let iconClass = 'fa fa-' + this.props.project.icon;
+    let liClass = 'project-list-item-li transition2 animated ' + this.props.project.transition + ' hover-' + this.props.color;
+    let iconClass = 'transition2opacity fa fa-' + this.props.project.icon;
+    let bubbleClass = 'transition1 bubble-container background-' + this.props.color;
+    let projectUrl = '/projects/' + this.props.project.id;
     return (
       <div className="project-list-item" onClick={this.onClick} onMouseOut={this.onMouseOut} onMouseOver={this.onMouseOver}>
-        <li className={liClass}>
-          <div className="project-list-item-triangle" style={this.state.borderStyle}></div>
-          <div className="project-list-item-title">{this.props.project.title}</div>
-          <div className="project-list-item-info">
-            <i className={iconClass}></i>
-          </div>
-        </li>
+        <Link to={projectUrl}>
+          <li className={liClass}>
+            <div className="project-list-item-triangle transition2" style={this.state.borderStyle}></div>
+            <div className="project-list-item-title">{this.props.project.title}</div>
+            <div className="project-list-item-info">
+              <i className={iconClass}></i>
+            </div>
+            <div className={bubbleClass}>{this.props.project.description}</div>
+          </li>
+        </Link>
       </div>
     );
   }
