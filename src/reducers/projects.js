@@ -19,9 +19,10 @@ const filterProjects = (state, categories) => {
   return fadeProjects(filteredProjects);
 };
 
-const getProject = (id) => {
-  return _.filter(projects, (project) => {
-    return project.id === id;
+const activateProject = (id) => {
+  return projects.map((project) => {
+    project.active = project.id === id;
+    return project;
   });
 };
 
@@ -30,8 +31,9 @@ export default (state = projects, action) => {
     case 'GET_PROJECTS':
       return projects;
 
-    case 'GET_PROJECT':
-      return getProject(action.id);
+    case 'ACTIVATE_PROJECT':
+      let test = activateProject(action.id);
+      return test;
 
     case 'FILTER_PROJECTS':
       return filterProjects(state, action.categories);

@@ -1,17 +1,18 @@
 import React from 'react';
 import './Project.css';
 import { connect } from 'react-redux';
-import { getProject } from '../actions/projects';
+import { activateProject } from '../actions/projects';
 import { bindActionCreators } from 'redux';
+import _ from 'lodash';
 
 class Project extends React.Component {
 
   componentWillMount() {
-    this.props.getProject(parseInt(this.props.params.projectId, 10));
+    this.props.activateProject(parseInt(this.props.params.projectId, 10));
   }
 
   componentWillReceiveProps(props) {
-    this.props.getProject(parseInt(props.params.projectId, 10));
+    this.props.activateProject(parseInt(props.params.projectId, 10));
   }
 
   renderImages() {
@@ -31,6 +32,9 @@ class Project extends React.Component {
   }
 
   render() {
+    if (!this.props.project) {
+      return null;
+    }
     let titleClass = 'project-title ' + this.props.color;
     return (
       <div className="project-container animated fadeIn">
@@ -45,14 +49,15 @@ class Project extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  let activeProject = _.filter(state.projects, 'active')[0];
   return {
-    project: state.projects[0]
+    project: activeProject
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getProject: bindActionCreators(getProject, dispatch)
+    activateProject: bindActionCreators(activateProject, dispatch)
   };
 };
 

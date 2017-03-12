@@ -23,9 +23,9 @@ export const fadeOutProjects = () => {
   };
 };
 
-export const getProject = (id) => {
+export const activateProject = (id) => {
   return {
-    type: 'GET_PROJECT',
+    type: 'ACTIVATE_PROJECT',
     id
   };
 };

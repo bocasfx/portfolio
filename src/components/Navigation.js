@@ -3,25 +3,37 @@ import './Navigation.css';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getProject } from '../actions/projects';
+import { activateProject } from '../actions/projects';
 import { browserHistory } from 'react-router';
+import _ from 'lodash';
 
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
     this.goToPrev = this.goToPrev.bind(this);
     this.goToNext = this.goToNext.bind(this);
+    this.updateProject = this.updateProject.bind(this);
   }
 
   goToPrev() {
-    let projectId = this.props.project.id - 1;
-    this.props.getProject(projectId);
-    browserHistory.push('/projects/' + projectId);
+    this.updateProject(this.getProjectId() - 1);
   }
   
   goToNext() {
-    let projectId = this.props.project.id + 1;
-    this.props.getProject(projectId);
+    this.updateProject(this.getProjectId() + 1);
+  }
+
+  getProjectId() {
+    let projectId = 0;
+    if (this.props.project) {
+      projectId = this.props.project.id;
+    }
+    return projectId;
+  }
+
+  updateProject(projectId) {
+    projectId = (this.props.projectCount + projectId) % this.props.projectCount;
+    this.props.activateProject(projectId);
     browserHistory.push('/projects/' + projectId);
   }
 
@@ -44,13 +56,14 @@ class Navigation extends React.Component {
 const mapStateToProps = (state) => {
   return { 
     navigation: state.navigation,
-    project: state.projects[0]
+    projectCount: state.projects.length,
+    project: _.filter(state.projects, 'active')[0]
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getProject: bindActionCreators(getProject, dispatch)
+    activateProject: bindActionCreators(activateProject, dispatch)
   };
 };
 
