@@ -1,11 +1,12 @@
 import React from 'react';
 import './Navigation.css';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { activateProject } from '../actions/projects';
+import { changeHeaderColor } from '../actions/navigation';
 import { browserHistory } from 'react-router';
 import _ from 'lodash';
+import colors from '../utils/colors';
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Navigation extends React.Component {
     this.goToPrev = this.goToPrev.bind(this);
     this.goToNext = this.goToNext.bind(this);
     this.updateProject = this.updateProject.bind(this);
+    this.goHome = this.goHome.bind(this);
   }
 
   goToPrev() {
@@ -32,9 +34,14 @@ class Navigation extends React.Component {
   }
 
   updateProject(projectId) {
+    this.props.changeHeaderColor(colors[projectId % colors.length]);
     projectId = (this.props.projectCount + projectId) % this.props.projectCount;
     this.props.activateProject(projectId);
     browserHistory.push('/projects/' + projectId);
+  }
+
+  goHome() {
+    browserHistory.push('/');
   }
 
   render() {
@@ -42,7 +49,7 @@ class Navigation extends React.Component {
     return (
       <div>
         <div className="navigation-container">
-          <Link to="/" className={navigationClass}></Link>
+          <div onClick={this.goHome} className={navigationClass}></div>
           <div className="transition2 navigation-prev-next">
               <div className="navigation-prev" onClick={this.goToPrev}>&lt; Prev</div>
               <div className="navigation-next" onClick={this.goToNext}>Next &gt;</div>
@@ -63,7 +70,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    activateProject: bindActionCreators(activateProject, dispatch)
+    activateProject: bindActionCreators(activateProject, dispatch),
+    changeHeaderColor: bindActionCreators(changeHeaderColor, dispatch)
   };
 };
 
