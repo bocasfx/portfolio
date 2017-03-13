@@ -1,31 +1,28 @@
 import React from 'react';
 import './Filter.css';
 import _ from 'lodash';
-import colors from '../utils/colors.js';
-
-const filterColors = {
-  laptop: { color: colors[0]},
-  'paint-brush': { color: colors[1]},
-  cutlery: { color: colors[2]},
-  music: { color: colors[3]},
-  'video-camera': { color: colors[4]},
-  wrench: { color: colors[5]}
-};
+import colors from '../utils/colors';
+import categories from '../utils/categories';
 
 class Filter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeCategories: [],
-      styles: {
-        laptop: null,
-        'paint-brush': null,
-        cutlery: null,
-        music: null,
-        'video-camera': null,
-        wrench: null
-      }
+    let state = {
+      styles: {},
+      activeCategories: []
     };
+    this.filterColors = {};
+
+    categories.forEach((category, idx) => {
+      this.filterColors[category] = {
+        color: colors[idx]
+      };
+      state.styles[category] = null;
+    });
+
+    this.state = state;
+
+    this.renderIcons = this.renderIcons.bind(this);
   }
 
   filterProjects(category) {
@@ -33,7 +30,7 @@ class Filter extends React.Component {
     activeCategories = _.xor(activeCategories, [category]);
 
     let styles = this.state.styles;
-    styles[category] = styles[category] ? null : filterColors[category];
+    styles[category] = styles[category] ? null : this.filterColors[category];
 
     this.setState({styles, activeCategories});
 
@@ -45,15 +42,24 @@ class Filter extends React.Component {
     
   }
 
+  renderIcons() {
+    return categories.map((category, idx) => {
+      let catClass = 'transition2 fa fa-' + category + ' hover-' + this.filterColors[category].color;
+      return (
+        <i
+          key={idx}
+          style={this.state.styles[category]}
+          className={catClass}
+          onClick={() => {this.filterProjects(category);}}
+        ></i>
+      );
+    });
+  }
+
   render() {
     return (
       <div className="filter-container">
-        <i style={this.state.styles.laptop} className="transition2 fa fa-laptop" onClick={() => {this.filterProjects('laptop');}}></i>
-        <i style={this.state.styles['paint-brush']} className="transition2 fa fa-paint-brush" onClick={() => {this.filterProjects('paint-brush');}}></i>
-        <i style={this.state.styles.cutlery} className="transition2 fa fa-cutlery" onClick={() => {this.filterProjects('cutlery');}}></i>
-        <i style={this.state.styles.music} className="transition2 fa fa-music" onClick={() => {this.filterProjects('music');}}></i>
-        <i style={this.state.styles['video-camera']} className="transition2 fa fa-video-camera" onClick={() => {this.filterProjects('video-camera');}}></i>
-        <i style={this.state.styles.wrench} className="transition2 fa fa-wrench" onClick={() => {this.filterProjects('wrench');}}></i>
+        {this.renderIcons()}
       </div>
     );
   }
