@@ -42,6 +42,7 @@ class Navigation extends React.Component {
 
   goHome() {
     browserHistory.push('/');
+    this.props.activateProject(0);
   }
 
   render() {

@@ -7,10 +7,10 @@ import { bindActionCreators } from 'redux';
 
 class Profile extends React.Component {
   render() {
-
+    let linkClass = 'hover-' + this.props.color;
     return (
       <div className="profile-container animated fadeIn">
-        <a href="https://www.linkedin.com/in/rodolfopalacios" target="_blank">
+        <a href="https://www.linkedin.com/in/rodolfopalacios" target="_blank" className={linkClass}>
           <img src="/img/profile.png" className="profile-image" alt="Profile"/>
           <div className="transition2 profile-name">Rodolfo Palacios</div>
           <div className="profile-title">Software Developer</div>
@@ -25,7 +25,9 @@ class Profile extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return state;
+  return {
+    color: state.navigation.color
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
