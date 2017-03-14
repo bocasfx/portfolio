@@ -116,7 +116,8 @@ let projects = [
     description: 'Logo design for Agfa\'s software delivery solution.',
     info: ['Logo design for Agfa\'s, now defunct, software delivery solution for clustered applications'],
     images: [
-      '/img/projects/agfa-deploy/01.jpg'
+      '/img/projects/agfa-deploy/01.jpg',
+      '/img/projects/agfa-deploy/02.jpg'
     ],
     'links': [],
     'videos': [],
@@ -278,8 +279,7 @@ let projects = [
     description: 'Four track virtual tape machine.',
     info: ['Tape pretends to be a tribute to the musicians that experimented with tape machines and tape loops in the 50s and 60s. It consists of four tracks where audio loops can be loaded. Each track is comp...'],
     images: [
-      '/img/projects/tape/01.jpg',
-      '/img/projects/tape/02.png'
+      '/img/projects/tape/01.jpg'
     ],
     'links': [],
     'videos': [
@@ -308,9 +308,7 @@ let projects = [
     'title': 'Marvin',
     description: 'Marvin is a three-dimensional image visualization tool.',
     info: ['Marvin is a three-dimensional image visualization and processing tool developed in C++. It utilizes VTK and ITK to render and manipulate the images. It provides a user friendly plugin interface tha...'],
-    images: [
-      '/img/projects/marvin/01.png'
-    ],
+    images: [],
     'links': [],
     'videos': [
       'https://player.vimeo.com/video/70109509',
@@ -460,7 +458,9 @@ let projects = [
       'href': 'https://soundcloud.com/sixtycycles/sets/ep01',
       'label': 'https://soundcloud.com/sixtycycles/sets/ep01'
     }],
-    'videos': [],
+    'videos': [
+    'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/233982967&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false'
+    ],
     icon: 'music'
   }, {
     id: 29,

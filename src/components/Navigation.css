@@ -6,7 +6,6 @@
   left: -150px;
   transform: rotate(-45deg);
   cursor: pointer;
-  background-color: plum;
   z-index: 10;
   box-shadow: 1px 1px 5px 0 rgba(175, 175, 175, 1);
 }
@@ -28,10 +27,6 @@
   color: white;
 }
 
-.navigation-home:hover {
-  font-weight: bold;
-}
-
 .navigation-container:hover .navigation-home {
   top: -30px;
   opacity: 0.3;
@@ -46,10 +41,6 @@
   z-index: 12;
   text-align: center;
   cursor: pointer;
-}
-
-.navigation-about:hover {
-  font-weight: bold;
 }
 
 .navigation-container:hover .navigation-about {
@@ -86,10 +77,6 @@
   line-height: 40px;
 }
 
-.navigation-prev-next div:hover {
-  font-weight: bold;
-}
-
 .navigation-prev {
   top: 63px;
   left: -53px;
@@ -97,4 +84,17 @@
 
 .navigation-next {
   top: 65px;
+}
+
+.navigation-hamburger {
+  color: dimgray;
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 120px;
+  opacity: 0.2;
+}
+
+.navigation-container:hover .navigation-hamburger {
+  opacity: 0;
 }

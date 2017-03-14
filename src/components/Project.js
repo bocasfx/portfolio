@@ -80,10 +80,12 @@ class Project extends React.Component {
     return this.props.project.videos.map((video, idx) => {
       let src = video + '?color=ffffff&title=0&byline=0&portrait=0';
       return (
-        <iframe
-          key={idx}
-          src={src}
-          frameBorder="0"></iframe>
+        <div className="project-iframe project-iframe-16x9" key={idx}>
+          <iframe
+            src={src}
+            height="500"
+            frameBorder="0"></iframe>
+        </div>
       );
     });
   }

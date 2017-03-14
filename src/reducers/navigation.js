@@ -1,5 +1,7 @@
+import colors from '../utils/colors';
+
 const initialState = {
-  color: 'plum',
+  color: colors[Math.floor(Math.random() * colors.length)],
   projectId: 0
 };
 

@@ -44,7 +44,7 @@ class Filter extends React.Component {
 
   renderIcons() {
     return categories.map((category, idx) => {
-      let catClass = 'transition2 fa fa-' + category + ' hover-' + this.filterColors[category].color;
+      let catClass = 'transition1 fa fa-' + category + ' hover-' + this.filterColors[category].color;
       return (
         <i
           key={idx}
