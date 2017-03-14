@@ -92,7 +92,8 @@
   position: absolute;
   top: 235px;
   left: 120px;
-  opacity: 0.2;
+  text-shadow: 1px 1px 0 gainsboro;
+  opacity: 0.5;
 }
 
 .navigation-container:hover .navigation-hamburger {

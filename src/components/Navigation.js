@@ -52,8 +52,9 @@ class Navigation extends React.Component {
   }
 
   render() {
-    let navigationClass = 'navigation-about transition2 background-' + this.props.navigation.color + ' animated fadeIn ' + this.props.navigation.color;
-    let containerClass = 'transition2 navigation-container background-' + this.props.navigation.color;
+    let color = this.props.navigation.color;
+    let navigationClass = 'navigation-about transition2 background-' + color + ' animated fadeIn ' + color;
+    let containerClass = 'transition2 navigation-container background-' + color;
     return (
       <div>
         <div className={containerClass}>
@@ -86,4 +87,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
-

@@ -172,7 +172,9 @@ let projects = [
       'href': 'https://thesofakings.bandcamp.com/',
       'label': 'https://thesofakings.bandcamp.com/'
     }],
-    'videos': [],
+    'videos': [
+      'https://bandcamp.com/EmbeddedPlayer/album=3842513782/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/'
+    ],
     icon: 'music'
   }, {
     id: 11,
@@ -263,9 +265,7 @@ let projects = [
     'title': 'MIDIWorm',
     description: 'MidiWorm is yet another soft MIDI controller.',
     info: ['MidiWorm is yet another soft MIDI controller. The worm is composed of 10 nodes. Each node is a MIDI message generator. Whether a message is generated depends on a probability calculated by the node...'],
-    images: [
-      '/img/projects/midiworm/01.png'
-    ],
+    images: [],
     'links': [],
     'videos': [
       'https://player.vimeo.com/video/70220903'
