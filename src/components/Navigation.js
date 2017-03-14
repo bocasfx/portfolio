@@ -58,7 +58,7 @@ class Navigation extends React.Component {
     return (
       <div>
         <div className={containerClass}>
-          <div className="transition3 navigation-hamburger"><i className="fa fa-bars"></i></div>
+          <div className="transition3 navigation-hamburger"><i className="fa fa-angle-down"></i></div>
           <div onClick={this.goAbout} className={navigationClass}>About</div>
           <div onClick={this.goHome} className="transition3 navigation-home">Home</div>
         </div>
