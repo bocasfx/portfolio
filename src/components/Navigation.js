@@ -15,6 +15,7 @@ class Navigation extends React.Component {
     this.goToNext = this.goToNext.bind(this);
     this.updateProject = this.updateProject.bind(this);
     this.goHome = this.goHome.bind(this);
+    this.goAbout = this.goAbout.bind(this);
   }
 
   goToPrev() {
@@ -45,17 +46,23 @@ class Navigation extends React.Component {
     this.props.activateProject(0);
   }
 
+  goAbout() {
+    browserHistory.push('/about');
+    this.props.activateProject(0);
+  }
+
   render() {
-    let navigationClass = 'navigation-home transition3 background-' + this.props.navigation.color + ' animated fadeIn ' + this.props.navigation.color;
+    let navigationClass = 'navigation-about transition2 background-' + this.props.navigation.color + ' animated fadeIn ' + this.props.navigation.color;
+    let containerClass = 'transition2 navigation-container background-' + this.props.navigation.color;
     return (
       <div>
-        <div className="navigation-container">
-          <div className={navigationClass}>About</div>
-          <div onClick={this.goHome} className="transition2 navigation-decoration">Home</div>
-          <div className="transition2 navigation-prev-next">
-              <div className="navigation-prev" onClick={this.goToPrev}>&lt; Prev</div>
-              <div className="navigation-next" onClick={this.goToNext}>Next &gt;</div>
-          </div>
+        <div className={containerClass}>
+          <div onClick={this.goAbout} className={navigationClass}>About</div>
+          <div onClick={this.goHome} className="transition3 navigation-home">Home</div>
+        </div>
+        <div className="transition3 navigation-prev-next">
+          <div className="navigation-prev" onClick={this.goToPrev}>&lt; Prev</div>
+          <div className="navigation-next" onClick={this.goToNext}>Next &gt;</div>
         </div>
       </div>
     );

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import Main from './components/Main';
 import Project from './components/Project';
+import About from './components/About';
 import reducer from './reducers';
 import './index.css';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
@@ -30,6 +31,7 @@ render(
         <Route path="/" component={App}>
           <IndexRoute component={Main}/>
           <Route path="/projects/:projectId" component={Project}></Route>
+          <Route path="/about" component={About}></Route>
         </Route>
       </Router>
     </div>
