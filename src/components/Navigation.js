@@ -46,11 +46,12 @@ class Navigation extends React.Component {
   }
 
   render() {
-    let navigationClass = 'transition1s background-' + this.props.navigation.color + ' navigation-home animated fadeIn';
+    let navigationClass = 'navigation-home transition3 background-' + this.props.navigation.color + ' animated fadeIn ' + this.props.navigation.color;
     return (
       <div>
         <div className="navigation-container">
-          <div onClick={this.goHome} className={navigationClass}></div>
+          <div className={navigationClass}>About</div>
+          <div onClick={this.goHome} className="transition2 navigation-decoration">Home</div>
           <div className="transition2 navigation-prev-next">
               <div className="navigation-prev" onClick={this.goToPrev}>&lt; Prev</div>
               <div className="navigation-next" onClick={this.goToNext}>Next &gt;</div>

@@ -7,12 +7,18 @@ import { bindActionCreators } from 'redux';
 
 class Profile extends React.Component {
   render() {
-    let linkClass = 'hover-' + this.props.color;
+    let linkClass = this.props.color;
+    let decoratorStyle = {
+      borderTopColor: this.props.color
+    };
     return (
       <div className="profile-container animated fadeIn">
         <a href="https://www.linkedin.com/in/rodolfopalacios" target="_blank" className={linkClass}>
           <img src="/img/profile.png" className="profile-image" alt="Profile"/>
-          <div className="transition2 profile-name">Rodolfo Palacios</div>
+          <div className="profile-name-container">
+            <div className="transition2 profile-name-decorator" style={decoratorStyle}></div>
+            <div className="transition2 profile-name">Rodolfo Palacios</div>
+          </div>
           <div className="profile-title">Software Developer</div>
         </a>
         <Filter

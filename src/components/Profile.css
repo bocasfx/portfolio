@@ -29,6 +29,29 @@
   font-weight: 200;
 }
 
+.profile-name-container {
+  position: relative;
+}
+
+.profile-name-decorator {
+  vertical-align: middle;
+  content: "";
+  border-right: 15px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 15px solid gainsboro;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 7px;
+  left: -20px;
+  margin-right: 3px;
+  opacity: 0;
+}
+
+.profile-container a:hover .profile-name-decorator {
+  opacity: 1;
+}
+
 @media (max-width: 970px) {
   .profile-container {
     position: relative;

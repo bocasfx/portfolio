@@ -1,4 +1,6 @@
-export default [
+import colors from '../utils/colors';
+
+let projects = [
   {
     id: 0,
     transition: 'fadeIn',
@@ -16,6 +18,8 @@ export default [
       '/img/projects/the-tree-within/07.jpg',
       '/img/projects/the-tree-within/08.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 1,
@@ -27,6 +31,8 @@ export default [
     images: [
       '/img/projects/non-violence-festival/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 2,
@@ -39,6 +45,8 @@ export default [
       '/img/projects/the-rambler/01.jpg',
       '/img/projects/the-rambler/02.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 3,
@@ -50,6 +58,8 @@ export default [
     images: [
       '/img/projects/give-n-get-network/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 4,
@@ -61,6 +71,8 @@ export default [
     images: [
       '/img/projects/rhino-works/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 5,
@@ -75,6 +87,8 @@ export default [
       '/img/projects/savvy-green/03.jpg',
       '/img/projects/savvy-green/04.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'laptop'
   }, {
     id: 6,
@@ -92,6 +106,7 @@ export default [
       'href': 'http://vitalresponse.ca/',
       'label': 'http://vitalresponse.ca/'
     }],
+    'videos': [],
     icon: 'laptop'
   }, {
     id: 7,
@@ -103,6 +118,8 @@ export default [
     images: [
       '/img/projects/agfa-deploy/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 8,
@@ -116,6 +133,7 @@ export default [
       '/img/projects/bloom/02.png',
       '/img/projects/bloom/03.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/97927320'
     ],
@@ -134,6 +152,7 @@ export default [
       'href': 'http://pinkchipotle.com/',
       'label': 'http://pinkchipotle.com/'
     }],
+    'videos': [],
     icon: 'cutlery'
   }, {
     id: 10,
@@ -141,7 +160,7 @@ export default [
     active: false,
     'title': 'The Sofa Kings',
     description: 'The Sofa Kings are the next generation of psychedelic jam music.',
-    info: ['The Sofa Kings are the next generation of psychedelic jam music. Taking inspiration from classic Funk and Jazz as well as modern improvisational and jam bands, they weave deceptively fluid bass lines ...'],
+    info: ['The Sofa Kings are the next generation of psychedelic jam music. Taking inspiration from classic Funk and Jazz as well as modern improvisational and jam bands, they weave deceptively fluid bass lines with funky and hypnotic drum beats into atmospheric keys and guitar lines that bubble and simmer with rhythm and melody, until they erupt into a soaring celebration of music!'],
     images: [
       '/img/projects/the-sofa-kings/01.jpg',
       '/img/projects/the-sofa-kings/02.jpg',
@@ -152,6 +171,7 @@ export default [
       'href': 'https://thesofakings.bandcamp.com/',
       'label': 'https://thesofakings.bandcamp.com/'
     }],
+    'videos': [],
     icon: 'music'
   }, {
     id: 11,
@@ -163,6 +183,7 @@ export default [
     images: [
       '/img/projects/q/01.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/105199076',
       'https://player.vimeo.com/video/70220681'
@@ -178,6 +199,8 @@ export default [
     images: [
       '/img/projects/espire/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 13,
@@ -197,6 +220,8 @@ export default [
       '/img/projects/geebee-pedals-2/08.jpg',
       '/img/projects/geebee-pedals-2/09.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 14,
@@ -209,6 +234,8 @@ export default [
       '/img/projects/the-sofa-kings-2/01.jpg',
       '/img/projects/the-sofa-kings-2/02.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 15,
@@ -226,6 +253,7 @@ export default [
       'href': 'https://www.yourtimeboutique.com/',
       'label': 'https://www.yourtimeboutique.com/'
     }],
+    'videos': [],
     icon: 'laptop'
   }, {
     id: 16,
@@ -237,6 +265,7 @@ export default [
     images: [
       '/img/projects/midiworm/01.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/70220903'
     ],
@@ -252,6 +281,7 @@ export default [
       '/img/projects/tape/01.jpg',
       '/img/projects/tape/02.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/116488656'
     ],
@@ -266,6 +296,7 @@ export default [
     images: [
       '/img/projects/bubbles/01.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/70220869'
     ],
@@ -280,6 +311,7 @@ export default [
     images: [
       '/img/projects/marvin/01.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/70109509',
       'https://player.vimeo.com/video/70109442',
@@ -300,6 +332,8 @@ export default [
       '/img/projects/the-vinyl-revival/02.jpg',
       '/img/projects/the-vinyl-revival/03.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 21,
@@ -311,6 +345,8 @@ export default [
     images: [
       '/img/projects/spanish-solutions/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 22,
@@ -327,6 +363,8 @@ export default [
     images: [
       '/img/projects/smarter-resources/01.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 23,
@@ -344,6 +382,7 @@ export default [
       'href': 'https://www.facebook.com/Druidas7/',
       'label': 'https://www.facebook.com/Druidas7/'
     }],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 24,
@@ -361,6 +400,7 @@ export default [
       'href': 'http://geebeepedals.com/',
       'label': 'http://geebeepedals.com/'
     }],
+    'videos': [],
     icon: 'paint-brush'
   }, {
     id: 25,
@@ -373,6 +413,7 @@ export default [
       '/img/projects/drone/01.png',
       '/img/projects/drone/02.png'
     ],
+    'links': [],
     'videos': [
       'https://player.vimeo.com/video/118287841'
     ],
@@ -388,6 +429,8 @@ export default [
       '/img/projects/crane-service-systems/01.jpg',
       '/img/projects/crane-service-systems/02.jpg'
     ],
+    'links': [],
+    'videos': [],
     icon: 'laptop'
   }, {
     id: 27,
@@ -403,12 +446,13 @@ export default [
       'href': 'http://sixtycycles.ca:3000/',
       'label': 'http://sixtycycles.ca:3000/'
     }],
+    'videos': [],
     icon: 'laptop'
   }, {
     id: 28,
     transition: 'fadeIn',
     active: false,
-    'title': 'SixtyCycles - EP01',
+    'title': 'SixtyCycles EP01',
     description: 'TBD',
     info: ['TBD'],
     images: [],
@@ -416,6 +460,7 @@ export default [
       'href': 'https://soundcloud.com/sixtycycles/sets/ep01',
       'label': 'https://soundcloud.com/sixtycycles/sets/ep01'
     }],
+    'videos': [],
     icon: 'music'
   }, {
     id: 29,
@@ -431,6 +476,17 @@ export default [
       'href': '/img/projects/bass-rack/bass-rack.skp',
       'label': 'Download Sketchup File'
     }],
+    'videos': [],
     icon: 'wrench'
   }
 ];
+
+const assignColors = (state) => {
+  return state.map((project, idx) => {
+    let color = colors[idx % colors.length];
+    project.color = color;
+    return project;
+  });
+};
+
+export default assignColors(projects);

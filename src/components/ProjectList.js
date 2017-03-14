@@ -4,8 +4,6 @@ import { getProjects } from '../actions/projects';
 import { connect } from 'react-redux';
 import ProjectListItem from './ProjectListItem';
 import { bindActionCreators } from 'redux';
-import colors from '../utils/colors';
-import { changeHeaderColor } from '../actions/navigation';
 
 class ProjectList extends React.Component {
 
@@ -15,13 +13,11 @@ class ProjectList extends React.Component {
 
   renderProjects() {
     return this.props.projects.map((project, idx) => {
-      let color = colors[idx % colors.length];
       return (
         <ProjectListItem
           project={project}
           key={idx}
           id={idx}
-          color={color}
           changeHeaderColor={this.props.changeHeaderColor}/>
       );
     });
@@ -46,8 +42,7 @@ const mapStatetoProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getProjects: bindActionCreators(getProjects, dispatch),
-    changeHeaderColor: bindActionCreators(changeHeaderColor, dispatch)
+    getProjects: bindActionCreators(getProjects, dispatch)
   };
 };
 

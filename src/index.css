@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Raleway', sans-serif;
   color: dimgray;
+  user-select: none;
 }
 
 a {
@@ -11,7 +12,7 @@ a {
 }
 
 a:hover {
-  color: salmon;
+  color: dimgray;
 }
 
 ul {

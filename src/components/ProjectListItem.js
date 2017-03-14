@@ -5,25 +5,22 @@ import { Link } from 'react-router';
 class ProjectListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.onClick = this.onClick.bind(this);
     this.onMouseOver = this.onMouseOver.bind(this);
     this.onMouseOut = this.onMouseOut.bind(this);
 
     this.state = {
-      borderTopColor: this.props.color,
-      opacity: 0
+      borderStyle: {
+        borderTopColor: this.props.project.color,
+        opacity: 0
+      }
     };
-  }
-
-  onClick() {
-    this.props.changeHeaderColor(this.props.color);
   }
 
   onMouseOver(event) {
     event.preventDefault();
     this.setState({
       borderStyle: {
-        borderTopColor: this.props.color,
+        borderTopColor: this.props.project.color,
         opacity: 1
       }
     });
@@ -39,9 +36,9 @@ class ProjectListItem extends React.Component {
   }
 
   render() {
-    let liClass = 'project-list-item-li transition2 animated ' + this.props.project.transition + ' hover-' + this.props.color;
+    let liClass = 'project-list-item-li transition2 animated ' + this.props.project.transition + ' hover-' + this.props.project.color;
     let iconClass = 'transition2opacity fa fa-' + this.props.project.icon;
-    let bubbleClass = 'transition1 bubble-container background-' + this.props.color;
+    let bubbleClass = 'transition1 bubble-container background-' + this.props.project.color;
     let projectUrl = '/projects/' + this.props.project.id;
     return (
       <div className="project-list-item" onClick={this.onClick} onMouseOut={this.onMouseOut} onMouseOver={this.onMouseOver}>

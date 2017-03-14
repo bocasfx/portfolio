@@ -16,17 +16,37 @@
   line-height: 1.5em;
 }
 
-.project-images-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 80px 0 480px;
+.project-prev {
+  top: 175px;
 }
 
-.project-images-container img {
+.project-next {
+  top: 65px;
+}
+
+.project-links-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.project-right {
+  margin: 0 40px 40px 440px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-width: 840px;
+}
+
+.project-right img {
   border: 1px solid gainsboro;
   margin-bottom: 40px;
   max-width: 100%;
+}
+
+.project-right iframe {
+  border: 1px solid gainsboro;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .project-left {
@@ -34,12 +54,27 @@
   position: fixed;
 }
 
-.project-prev {
-  top: 175px;
+.project-link-decorator {
+  vertical-align: middle;
+  content: "";
+  border-right: 10px solid transparent;
+  border-left: 0px solid transparent;
+  border-top: 10px solid gainsboro;
+  width: 0;
+  height: 0;
+  position: relative;
+  top: 3px;
+  left: 0;
+  margin-right: 3px;
 }
 
-.project-next {
-  top: 65px;
+.project-links-container {
+  display: flex;
+}
+
+.project-link {
+  display: inline;
+  color: gainsboro;
 }
 
 @media (max-width: 970px) {
@@ -59,11 +94,16 @@
     text-align: center;
   }
 
-  .project-images-container {
+  .project-right {
     margin: 0;
   }
 
   .project-info {
+    margin-bottom: 40px;
+  }
+
+  .project-links-container {
+    justify-content: center;
     margin-bottom: 40px;
   }
 }
