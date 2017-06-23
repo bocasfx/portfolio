@@ -629,9 +629,10 @@ let projects = [
     images: [
       '/img/projects/q2/01.png'
     ],
-    'links': [
-      'http://palacios.ca/q'
-    ],
+    'links': [{
+      href: 'http://palacios.ca/q',
+      label: 'http://palacios.ca/q'
+    }],
     'videos': [],
     icon: 'laptop',
     media: [
@@ -650,9 +651,10 @@ let projects = [
     images: [
       '/img/projects/cookbook/01.png'
     ],
-    'links': [
-      'http://ckbk.ca'
-    ],
+    'links': [{
+      href: 'http://ckbk.ca',
+      label: 'http://ckbk.ca'
+    }],
     'videos': [],
     icon: 'laptop',
     media: [
