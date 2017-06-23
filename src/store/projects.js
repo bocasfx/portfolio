@@ -570,8 +570,8 @@ let projects = [
       '/img/projects/drone-2/01.png'
     ],
     'links': [{
-      'href': 'http://sixtycycles.ca:3000/',
-      'label': 'http://sixtycycles.ca:3000/'
+      'href': 'http://palacios.ca/drone2/',
+      'label': 'http://palacios.ca/drone2/'
     }],
     'videos': [],
     icon: 'laptop',
@@ -618,6 +618,47 @@ let projects = [
     icon: 'wrench',
     media: [
       'sketchup'
+    ]
+  }, {
+    'title': 'Q2',
+    id: 30,
+    transition: 'fadeIn',
+    active: false,
+    description: 'Q is a soft MIDI controller.',
+    info: ['Q is a soft MIDI controller that uses particle streams and note nodes to generate music.'],
+    images: [
+      '/img/projects/q2/01.png'
+    ],
+    'links': [
+      'http://palacios.ca/q'
+    ],
+    'videos': [],
+    icon: 'laptop',
+    media: [
+      'node',
+      'react',
+      'redux',
+      'electron'
+    ]
+  }, {
+    'title': 'Cookbook',
+    id: 31,
+    transition: 'fadeIn',
+    active: false,
+    description: 'All my recipes in one place.',
+    info: ['All my recipes in one place'],
+    images: [
+      '/img/projects/cookbook/01.png'
+    ],
+    'links': [
+      'http://ckbk.ca'
+    ],
+    'videos': [],
+    icon: 'laptop',
+    media: [
+      'node',
+      'react',
+      'mongo'
     ]
   }
 ];
