@@ -9,7 +9,7 @@ let projects = [
     description: 'Q is a soft MIDI controller.',
     info: ['Q is a soft MIDI controller that uses particle streams and note nodes to generate music.'],
     images: [
-      '/img/projects/q2/01.png'
+      '/img/projects/q2/01.gif'
     ],
     'links': [{
       href: 'http://r.palacios.ca/q',
