@@ -24,11 +24,15 @@ import { syncHistoryWithStore } from 'react-router-redux';
 const store = createStore(reducer);
 const history = syncHistoryWithStore(browserHistory, store);
 
+var onChange = () => {
+  window.scrollTo(0, 0);
+};
+
 render(
   <Provider store={store}>
     <div>
       <Router history={history}>
-        <Route path="/" component={App}>
+        <Route path="/" component={App} onChange={onChange}>
           <IndexRoute component={Main}/>
           <Route path="/projects/:projectId" component={Project}></Route>
           <Route path="/about" component={About}></Route>
