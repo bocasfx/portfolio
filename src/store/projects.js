@@ -49,8 +49,8 @@ let projects = [
     id: 29,
     transition: 'fadeIn',
     active: false,
-    description: 'TBD',
-    info: ['TBD'],
+    description: 'Bass Rack blueprints.',
+    info: ['I built this bass rack for my basses and guitars.'],
     images: [
       '/img/projects/bass-rack/01.png'
     ],
@@ -68,8 +68,8 @@ let projects = [
     id: 28,
     transition: 'fadeIn',
     active: false,
-    description: 'TBD',
-    info: ['TBD'],
+    description: 'SixtyCycles EP',
+    info: ['A few songs I wrote and recorded for my multimedia project SixtyCycles'],
     images: [],
     'links': [{
       'href': 'https://soundcloud.com/sixtycycles/sets/ep01',
@@ -87,8 +87,8 @@ let projects = [
     id: 27,
     transition: 'fadeIn',
     active: false,
-    description: 'TBD',
-    info: ['TBD'],
+    description: 'Drone based music web application.',
+    info: ['Create flowing drone tones by creating drone elements and manipulating their configuration parameters.'],
     images: [
       '/img/projects/drone-2/01.png'
     ],
