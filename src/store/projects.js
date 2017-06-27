@@ -258,7 +258,7 @@ let projects = [
     transition: 'fadeIn',
     active: false,
     description: 'Marvin is a three-dimensional image visualization tool.',
-    info: ['Marvin is a three-dimensional image visualization and processing tool developed in C++. It utilizes VTK and ITK to render and manipulate the images. It provides a user friendly plugin interface tha...'],
+    info: ['Marvin is a three-dimensional image visualization and processing tool developed in C++. It utilizes VTK and ITK to render and manipulate the images. It provides a user friendly plugin interface that allows the creation of both image processing and visualization plugins.'],
     images: [],
     'links': [],
     'videos': [
@@ -280,7 +280,7 @@ let projects = [
     transition: 'fadeIn',
     active: false,
     description: 'Bubbles is a soft MIDI controller.',
-    info: ['Bubbles is a soft MIDI controller that receives MIDI messages from other MIDI controlers, e.g. keyboards. When a MIDI message is received a bubble is created based on the parameters of the message. Bu...'],
+    info: ['Bubbles is a soft MIDI controller that receives MIDI messages from other MIDI controlers, e.g. keyboards. When a MIDI message is received a bubble is created based on the parameters of the message. Bubbles move and collide with each other creating new MIDI messages. Bubbles can also be created with random MIDI parameters by clicking on the screen.'],
     images: [
       '/img/projects/bubbles/01.png'
     ],
@@ -298,7 +298,7 @@ let projects = [
     transition: 'fadeIn',
     active: false,
     description: 'Four track virtual tape machine.',
-    info: ['Tape pretends to be a tribute to the musicians that experimented with tape machines and tape loops in the 50s and 60s. It consists of four tracks where audio loops can be loaded. Each track is comp...'],
+    info: ['Tape pretends to be a tribute to the musicians that experimented with tape machines and tape loops in the 50s and 60s. It consists of four tracks where audio loops can be loaded. Each track is completely independent of each other.'],
     images: [
       '/img/projects/tape/01.jpg'
     ],
@@ -317,7 +317,7 @@ let projects = [
     transition: 'fadeIn',
     active: false,
     description: 'MidiWorm is yet another soft MIDI controller.',
-    info: ['MidiWorm is yet another soft MIDI controller. The worm is composed of 10 nodes. Each node is a MIDI message generator. Whether a message is generated depends on a probability calculated by the node...'],
+    info: ['MidiWorm is yet another soft MIDI controller. The worm is composed of 10 nodes. Each node is a MIDI message generator. Whether a message is generated depends on a probability calculated by the node and the node\'s position on the screen. On the screen, the x-axis represents notes and the y-axis represents the velocity of the notes. It is possible to select predefined musical scales so only the notes that belong to the selected scale are played.'],
     images: [],
     'links': [],
     'videos': [
@@ -419,7 +419,7 @@ let projects = [
     transition: 'fadeIn',
     active: false,
     description: 'Q is a soft MIDI controller.',
-    info: ['Q is a soft MIDI controller that uses particle streams and note nodes to generate MIDI messages. When a particle comes in contact with a node it generates a MIDI message depending on the node’s act...'],
+    info: ['Q is a soft MIDI controller that uses particle streams and note nodes to generate MIDI messages. When a particle comes in contact with a node it generates a MIDI message.'],
     images: [
       '/img/projects/q/01.png'
     ],
@@ -484,7 +484,7 @@ let projects = [
     transition: 'fadeIn',
     active: false,
     description: '3D animation based on computer simulations of natural systems.',
-    info: ['3D animation based on computer simulations of natural systems. Created using Processing, Blender and Ableton Live. Licensed under Creative Commons – Attribution Share Alike. Music and animation by Six...'],
+    info: ['3D animation based on computer simulations of natural systems. Created using Processing, Blender and Ableton Live. Licensed under Creative Commons – Attribution Share Alike.'],
     images: [
       '/img/projects/bloom/01.png',
       '/img/projects/bloom/02.png',
