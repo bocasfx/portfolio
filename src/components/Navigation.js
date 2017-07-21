@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { activateProject } from '../actions/projects';
+import { activateProject, filterProjects } from '../actions/projects';
 import { changeHeaderColor } from '../actions/navigation';
 import { browserHistory } from 'react-router';
 import _ from 'lodash';
@@ -19,11 +19,19 @@ class Navigation extends React.Component {
   }
 
   goToPrev() {
-    this.updateProject(this.getProjectId() - 1);
+    let projectId = 0;
+    if (this.props.project) {
+      projectId = this.getProjectId() + 1;
+    }
+    this.updateProject(projectId);
   }
   
   goToNext() {
-    this.updateProject(this.getProjectId() + 1);
+    let projectId = 0;
+    if (this.props.project) {
+      projectId = this.getProjectId() - 1;
+    }
+    this.updateProject(projectId);
   }
 
   getProjectId() {
@@ -43,7 +51,8 @@ class Navigation extends React.Component {
 
   goHome() {
     browserHistory.push('/');
-    this.props.activateProject(0);
+    this.props.filterProjects([]);
+    this.props.activateProject(null);
   }
 
   goAbout() {
@@ -82,6 +91,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     activateProject: bindActionCreators(activateProject, dispatch),
+    filterProjects: bindActionCreators(filterProjects, dispatch),
     changeHeaderColor: bindActionCreators(changeHeaderColor, dispatch)
   };
 };

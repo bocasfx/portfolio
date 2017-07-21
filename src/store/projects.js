@@ -3,7 +3,7 @@ import colors from '../utils/colors';
 let projects = [
   {
     'title': 'Q2',
-    id: 30,
+    id: 31,
     transition: 'fadeIn',
     active: false,
     description: 'Q is a soft MIDI controller.',
@@ -25,7 +25,7 @@ let projects = [
     ]
   }, {
     'title': 'Cookbook',
-    id: 31,
+    id: 30,
     transition: 'fadeIn',
     active: false,
     description: 'All my recipes in one place.',
