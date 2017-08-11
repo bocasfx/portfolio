@@ -56,7 +56,7 @@
   opacity: 1;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1234px) {
   .about-container {
     position: relative;
   }

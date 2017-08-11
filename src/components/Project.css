@@ -99,7 +99,7 @@
   text-align: center;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1234px) {
   .project-container {
     display: flex;
     margin: 80px 20px;
